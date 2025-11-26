@@ -1,5 +1,5 @@
 body {
-    background-image: url("/images/infinitewater.gif");
+    background-image: url("images/infinitewater.gif");
 }
 .title {
     display: block;
@@ -14,7 +14,7 @@ h3 {
     text-align: center;
 }
 .kitkat {
-    background-image: url("/images/kitkat.gif");
+    background-image: url("images/kitkat.gif");
     background-repeat: repeat-x;
 }
 .videos {
