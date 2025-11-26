@@ -1,0 +1,26 @@
+<head>
+    <title>biterr's site</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <script src="../header.js"></script>
+    </header>
+    <main>
+        <h1>My cat's gallery</h1>
+        <h4>Pictures go from youngest to oldest</h4>
+        <script>
+var folder = "../images/bacva/";
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                $("main").append( "<a href='"+ folder + val +"'><img src='"+ folder + val +"'></a>" );
+            } 
+        });
+    }
+});
+        </script>
+    </main>
+</body>
